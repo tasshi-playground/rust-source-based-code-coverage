@@ -2,7 +2,7 @@ set -eux
 export RUSTFLAGS="-Zinstrument-coverage"
 
 export TARGET_BINARY_DIR="target/debug"
-export COVERAGE_HTML_DIR="coverage"
+export COVERAGE_HTML_DIR="docs"
 export LLVM_PROFILE_DIR=${TARGET_BINARY_DIR}"/coverage/profraw"
 export LLVM_PROFILE_FILE=${LLVM_PROFILE_DIR}"/mshrtsr-%p-%m.profraw"
 export LLVM_PROFDATA_FILE=${LLVM_PROFILE_DIR}"/merged.profdata"
