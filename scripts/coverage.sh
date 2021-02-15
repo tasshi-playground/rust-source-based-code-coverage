@@ -20,7 +20,7 @@ cargo +nightly run --verbose
 cargo +nightly test --verbose
 
 # html
-rustup run nightly grcov . --binary-path ${TARGET_BINARY_DIR} -s . -t html --branch --ignore-not-existing -o ${COVERAGE_HTML_DIR}
+rustup run nightly grcov . --binary-path ${TARGET_BINARY_DIR} -s . -t html --branch --ignore-not-existing --ignore "/*" -o ${COVERAGE_HTML_DIR}
 
 # stdout
 cargo +nightly profdata -- merge -sparse ${LLVM_PROFILE_DIR}/*  -o ${LLVM_PROFDATA_FILE}
